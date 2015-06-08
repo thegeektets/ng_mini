@@ -1,21 +1,77 @@
-<!doctype html>
-<html>
-<head></head>
-<body>
-	
-	<div class="slide" ng-controller="DigitalController">
+	<div id="brand" class="slide" ng-controller="DigitalController">
 		<div class="row">
-			<section class="slide-intro">
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-			</section>
-			<section class="form-wrapper">
-				<form>
-					<input type="text" ng-model="person.name">
-					<a class="button" ng-href="{{myHref}}/feedback"></a>
-				</form>
-			</section>
+			<div class="small-12 columns">
+				<h2>Digital at ARK</h2>
+				<section class="slide-intro">
+					<p>Brand identity is the visualisation and vocalisation of the strategy. It incorporates the creation of the brand name, logomarks, corporate and packaging design, brand guidelines, brand communications and collateral, brand language, environments and events.</p>
+				</section>
+			</div>
+		<div class="small-12 columns">
+		<a href='#/expertise' class='triangle-left'></a>
+			<div class="small-8 small-offset-2 columns">
+				<hr>
+			</div>
+		<div>
+			<div class="small-12 columns">
+				<section class="form-wrapper">
+					<h3>Let's make something awesome together!</h3>
+					<p>Thank you for your interest in working with us. Please fill out this document to the best of your ability. The more information that you can supply us with in this survey, the more informed and useful our response will be to you.</p>
+					<form name="contact">
+						<div class="row">
+						    <div class="small-10 small-offset-1 columns">
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Organisation Name" ng-model="organisation.name" required='true' required  >
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Your Name" ng-model="organisation.contact" required='true' required>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Email" ng-model="organisation.email" required='true'required>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Telephone Number" ng-model="organisation.telephone" required='true'required>
+						        </div>
+						      </div>
+						      <h4></h4>
+						    	<div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">Budget</label>
+						          <p class="center">A transparent budget will help us ensure expectations are met.</p>
+						          <textarea ng-model="project.budget" required='true' required></textarea>
+						        </div>
+						        
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">Timeframe</label>
+						          <p class="center">Is there a specific timeframe or deadline for the project?</p>
+						        </div>
+						        <div class="small-12 columns">
+									<textarea ng-model="project.timeframe" required='true' required></textarea>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">About the Project</label>
+						          <p class="center">Describe the project, requirements and objectives.</p>
+						        </div>
+						        <div class="small-12 columns">
+									<textarea ng-model="project.details" required='true' required></textarea>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+							<buttom class="button" ng-click="sendmail()" ng-disabled="contact.$invalid">Submit</button>
+					</form>
+				</section>
+			</div>
+			
 		</div>
 	</div>
-
-</body>
-</html>

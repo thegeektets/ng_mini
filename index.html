@@ -6,21 +6,35 @@
 	<title>Grimm!</title>
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/animation.css" />
+	<link href="js/min/ng-scrollable.min.css" rel="stylesheet">
+  
+
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-animate.min.js"></script>
-  <script src="js/vendor/modernizr.js"></script>
-</head>
-<body>
-	<div class="main-wrapper" ng-view>
-		
-	</div>
-
+	<script src="js/vendor/modernizr.js"></script>
 	<script src="js/vendor/jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-  <script src="js/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
+  	<script src="js/foundation.min.js"></script>
+  	<script src="js/foundation/foundation.slider.js"></script>
+	<script>
+		(function($) {
+			// $(document).foundation(
+			// 	slider: {
+			//     on_change: function(){
+			//       // do something when the value changes
+			//     }
+			//   }
+			// );
+		})(jQuery);
+
+	</script>
+
+
+</head>
+<body ng-app="app" class="page {{ pageClass }}" ng-view>
+	
 </body>
 </html>

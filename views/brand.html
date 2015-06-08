@@ -1,21 +1,78 @@
-<!doctype html>
-<html>
-<head></head>
-<body>
-	
-	<div class="slide" ng-controller="BrandController">
+	<div id="brand" class="slide" ng-controller="BrandController">
 		<div class="row">
-			<section class="slide-intro">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</section>
-			<section class="form-wrapper">
-				<form>
-					<input type="text" ng-model="person.name">
-					<a class="button" ng-href="{{myHref}}/feedback"></a>
-				</form>
-			</section>
+			<div class="small-12 columns">
+				<h2>Brand at ARK</h2>
+				<section class="slide-intro">
+					<p>Brand identity is the visualisation and vocalisation of the strategy. It incorporates the creation of the brand name, logomarks, corporate and packaging design, brand guidelines, brand communications and collateral, brand language, environments and events.</p>
+				</section>
+			</div>
+			
+		<div class="small-12 columns">
+		<a href='#/expertise' class='triangle-left'></a>
+			<div class="small-8 small-offset-2 columns">
+				<hr>
+			</div>
+		<div>
+			<div class="small-12 columns">
+				<section class="form-wrapper">
+					<h3>Let's make something awesome together!</h3>
+					<p>Thank you for your interest in working with us. Please fill out this document to the best of your ability. The more information that you can supply us with in this survey, the more informed and useful our response will be to you.</p>
+					<form name='contact'>
+						<div class="row">
+						    <div class="small-10 small-offset-1 columns">
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Organisation Name" ng-model="organisation.name" required>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Your Name" ng-model="organisation.contact" required>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Email" ng-model="organisation.email" required >
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+									<input type="text" id="right-label" placeholder="Telephone Number" ng-model="organisation.telephone" required>
+						        </div>
+						      </div>
+						      <h4></h4>
+						    	<div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">Budget</label>
+						          <p class="center">A transparent budget will help us ensure expectations are met.</p>
+						          <textarea ng-model="project.budget" required></textarea>
+						        </div>
+						     
+						    
+						      <div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">Timeframe</label>
+						          <p class="center">Is there a specific timeframe or deadline for the project?</p>
+						        </div>
+						        <div class="small-12 columns">
+									<textarea ng-model="project.timeframe" required></textarea>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="small-12 columns">
+						          <label class="text-center">About the Project</label>
+						          <p class="center">Describe the project, requirements and objectives.</p>
+						        </div>
+						        <div class="small-12 columns">
+									<textarea ng-model="project.details" required ></textarea>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+							<buttom class="button" ng-click="sendmail()" ng-disabled="contact.$invalid">Submit</button>
+					</form>
+				</section>
+			</div>
+
 		</div>
 	</div>
-
-</body>
-</html>
